@@ -28,7 +28,6 @@ public class HomeController {
 	@RequestMapping(value = "/student/{id}", method = RequestMethod.GET, produces = "application/json")
 	public Student login(@PathVariable int id, HttpServletResponse response) {
 		Student s = si.login(id);
-		// return s;
 
 		if (s != null) {
 			response.setStatus(HttpServletResponse.SC_FOUND);
